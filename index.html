@@ -359,11 +359,11 @@
           padding:28px 0
         }
         .stats-grid {
-          display:grid;
-          gap:18px;
-          grid-template-columns:repeat(3,1fr);
-          text-align:center
-        }
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
         .stat strong {
           display:block;
           font-family:var(--heading);
@@ -1821,14 +1821,14 @@
       </section>
       <div class="orange-divider">
       </div>
-      <section class="stats-bar" justify-content:center; aria-label="Founder profile statistics">
-        <div class="container stats-grid">
-          <div class="stat reveal">
-            <strong>2026</strong>
-            <span>Research Ecosystem Founded</span>
-          </div>
-        </div>
-      </section>
+      <section class="stats-bar" aria-label="Founder profile statistics">
+  <div class="container stats-grid">
+    <div class="stat reveal">
+      <strong>2026</strong>
+      <span>Research Ecosystem Founded</span>
+    </div>
+  </div>
+</section>
       <section class="section" id="focus" style="background:white">
         <div class="container">
           <div class="reveal">
@@ -1928,30 +1928,23 @@
         </div>
       </section>
       <section class="section dark-section">
-        <div class="container">
-          <div class="reveal">
-            <h2 class="section-title white">Philosophy</h2>
-            <span class="orange-rule">
-            </span>
-          </div>
-          <!--<div class="focus-list">
-            <div class="focus-bar reveal">
-              <span>Institutional continuity</span>
-            </div>
-            <div class="focus-bar reveal">
-              <span>Documented processes</span>
-            </div>
-            <div class="focus-bar reveal">
-              <span>Collaborative leadership</span>
-            </div>
-            <div class="focus-bar reveal">
-              <span>Research integrity and evidence-based decision-making</span>
-            </div>-->
-          </div>
-          <p class="lead-copy reveal" style="color:rgba(255,255,255,.78);margin-top:34px">“The frontier isn't a place. It's a question we haven't asked yet.”</p>
-          <p class="subtitle reveal" style="color:rgba(255,255,255,.78);margin-top:18px">Build systems that allow the mission to outlive the individual.</p>
-        </div>
-      </section>
+  <div class="container">
+
+    <div class="reveal">
+      <h2 class="section-title white">Philosophy</h2>
+      <span class="orange-rule"></span>
+    </div>
+
+    <p class="lead-copy reveal philosophy-quote">
+      “The frontier isn't a place. It's a question we haven't asked yet.”
+    </p>
+
+    <p class="subtitle reveal philosophy-principle">
+      Build systems that allow the mission to outlive the individual.
+    </p>
+
+  </div>
+</section>
       <section class="section">
         <div class="container">
           <div class="reveal">
