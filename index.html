@@ -1754,6 +1754,178 @@
         }
 </style>
   </head>
+
+  <!-- =========================
+     PENTA MINDS MAINTENANCE MODE
+     Paste immediately after <body>
+     Remove entire block to disable
+========================= -->
+
+<div id="pm-maintenance">
+
+<style>
+#pm-maintenance{
+position:fixed;
+inset:0;
+background:#0D2145;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:999999;
+font-family:Arial,sans-serif;
+text-align:center;
+}
+
+#pm-maintenance .pm-box{
+max-width:750px;
+}
+
+#pm-maintenance .pm-icon{
+font-size:72px;
+margin-bottom:20px;
+animation:pm-spin 6s linear infinite;
+}
+
+#pm-maintenance h1{
+margin:0;
+color:#ffffff;
+font-size:clamp(2rem,4vw,3.2rem);
+font-weight:700;
+}
+
+#pm-maintenance h1 span{
+color:#E87722;
+}
+
+#pm-maintenance .pm-divider{
+width:70px;
+height:4px;
+background:#E87722;
+margin:20px auto;
+border-radius:999px;
+}
+
+#pm-maintenance p{
+color:#d1d5db;
+font-size:1rem;
+line-height:1.7;
+margin-bottom:24px;
+}
+
+#pm-maintenance .pm-tags{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+#pm-maintenance .pm-tags span{
+background:#132035;
+padding:8px 14px;
+border-radius:999px;
+font-size:.8rem;
+color:#b8c0cc;
+}
+
+#pm-maintenance .pm-footer{
+margin-top:24px;
+font-size:.85rem;
+color:#8a94a6;
+}
+
+@keyframes pm-spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+.pm-gears{
+display:flex;
+justify-content:center;
+align-items:flex-end;
+margin-bottom:24px;
+}
+
+.pm-gear-large{
+animation:pmGearSpin 4s linear infinite;
+transform-origin:center;
+}
+
+.pm-gear-small{
+margin-left:-8px;
+margin-bottom:2px;
+animation:pmGearSpinReverse 3s linear infinite;
+transform-origin:center;
+}
+
+@keyframes pmGearSpin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+@keyframes pmGearSpinReverse{
+from{transform:rotate(0deg);}
+to{transform:rotate(-360deg);}
+}
+</style>
+
+<script>
+document.documentElement.style.overflow='hidden';
+window.addEventListener('load',()=>{
+document.body.querySelectorAll(':scope > *:not(#pm-maintenance)').forEach(el=>{
+el.style.display='none';
+});
+});
+</script>
+
+<div class="pm-box">
+
+<div class="pm-gears">
+
+<svg class="pm-gear-large" width="56" height="56" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M33 10h6l1 5.5a16 16 0 0 1 4.2 1.7l4.7-2.9 4.2 4.2-2.9 4.7a16 16 0 0 1 1.7 4.2L57 28.5v6l-5.1 1a16 16 0 0 1-1.7 4.1l2.9 4.8-4.2 4.2-4.8-2.9a16 16 0 0 1-4.1 1.7L39 52.5h-6l-1-5.1a16 16 0 0 1-4.1-1.7l-4.8 2.9-4.2-4.2 2.9-4.8a16 16 0 0 1-1.7-4.1L15 34.5v-6l5.1-1a16 16 0 0 1 1.7-4.2l-2.9-4.7 4.2-4.2 4.7 2.9a16 16 0 0 1 4.2-1.7L33 10z" fill="#E87722"/>
+  <circle cx="36" cy="36" r="8" fill="#0D2145"/>
+  <circle cx="36" cy="36" r="5" fill="#E87722"/>
+</svg>
+
+<svg class="pm-gear-small" width="32" height="32" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M33 10h6l1 5.5a16 16 0 0 1 4.2 1.7l4.7-2.9 4.2 4.2-2.9 4.7a16 16 0 0 1 1.7 4.2L57 28.5v6l-5.1 1a16 16 0 0 1-1.7 4.1l2.9 4.8-4.2 4.2-4.8-2.9a16 16 0 0 1-4.1 1.7L39 52.5h-6l-1-5.1a16 16 0 0 1-4.1-1.7l-4.8 2.9-4.2-4.2 2.9-4.8a16 16 0 0 1-1.7-4.1L15 34.5v-6l5.1-1a16 16 0 0 1 1.7-4.2l-2.9-4.7 4.2-4.2 4.7 2.9a16 16 0 0 1 4.2-1.7L33 10z" fill="#FFFFFF" opacity="0.15"/>
+  <circle cx="36" cy="36" r="5" fill="#FFFFFF" opacity="0.2"/>
+</svg>
+
+</div>
+
+<h1>
+Maintenance
+<span>In Progress</span>
+</h1>
+
+<div class="pm-divider"></div>
+
+<p>
+We are currently updating this website with new content,
+research initiatives, projects, and improvements.
+Some sections may be unavailable while updates are being deployed.<br>We thank you for visiting us.<br>We will be live soon!
+</p>
+
+<div class="pm-tags">
+<span>Maintenance in Progress</span>
+<span>Content Updates</span>
+<span>Research Ecosystem</span>
+</div>
+
+<div class="pm-footer">
+Penta Minds · Updates are live and continuous
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     END MAINTENANCE MODE
+========================= -->
+  
   <body class="is-loading">
     <div class="page-loader" aria-label="Loading Penta Minds website" role="status">
       <div class="loader-logo" aria-hidden="true">
